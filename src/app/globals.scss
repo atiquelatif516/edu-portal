@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// :root {
+//   --background: #ffffff;
+//   --foreground: #171717;
+// }
+
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --background: #0a0a0a;
+//     --foreground: #ededed;
+//   }
+// }
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.img-container-t {
+  height: 100%; /* or any specific height */
+  width: 100%; /* or any specific width */
+  overflow: hidden; /* hides overflow if the image doesn't fit perfectly */
+  display: flex; /* to center the image */
+  justify-content: center; /* horizontally center the image */
+  align-items: center; /* vertically center the image */
+}
+
+.img-container-t img {
+  height: 100%; /* fills the height of the container */
+  width: 100%; /* fills the width of the container */
+  object-fit: cover; /* covers the entire container while maintaining aspect ratio */
+}
+
+.table-pagination {
+    // background-color: var(--textDarker);
+    padding: 7px 16px;
+    margin: 0px;
+    li {
+      border-radius: 10px;
+    }
+    .ant-pagination-prev {
+      .ant-pagination-item-link {
+        border-radius: 10px;
+      }
+    }
+    .ant-pagination-next {
+      .ant-pagination-item-link {
+        border-radius: 10px;
+      }
+    }
+
+    li:nth-child(n + 2):nth-last-child(n + 2) {
+      border-radius: 10px;
+    }
+    .ant-pagination-total-text {
+      flex: 1;
+    }
+    .ant-pagination-options {
+      flex: 1 !important;
+      float: right;
+      display: flex;
+      /* margin-left: 118px; */
+      justify-content: flex-end;
+    }
+    .ant-pagination-item-active {
+      // background-color: #9dc9fb;
+    }
+  }
